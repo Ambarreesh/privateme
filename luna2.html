@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question</title>
+    <style>
+        /* Responsive styles */
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+
+  input, select, button {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+    .inp{
+        height: 30px;
+        width: 150px;
+        border-radius: 12px;
+        border: solid black;
+        left: 100px;
+    }
+    .sub{
+        height: 30px;
+        width: 90px;
+        background-color: pink;
+        border-radius: 10px;
+    }
+    </style>
+</head>
+<body>
+    <center>
+        <table>
+            <tr>
+                <td><h1>In Which Class We studied Together..</h1></td>
+            </tr>
+            <tr>
+                <td><input class="inp" id="inp" type="text" placeholder="Which Standard"></td>
+            </tr>
+            <tr>
+                <td><button class="sub" type="submit" onclick="message()">Submit</button></td>
+            </tr>
+            <tr>
+                <td><h2>Hey you!</h2><h1 id="mes" style="color: red;"></h1></td>
+                
+            </tr>
+        </table>
+    </center>    
+    <script>
+        
+        function message(){
+         
+    const a = document.getElementById("inp").value.trim().toLowerCase();
+    const validStandards = ["8", "8th", "eighth", "eighth standard"];
+
+    if (validStandards.includes(a)) {
+        document.getElementById("mes").innerText = "I LOVE YOU!";
+    } else {
+        document.getElementById("mes").innerText = "Enter correct answer....";
+    }
+        }
+    </script>
+</body>
+</html>
